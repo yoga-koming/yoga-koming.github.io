@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Undangan</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Parisienne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body * {
+                font-family: "Poppins", sans-serif;
+            }
+            .handwritting {
+                font-family: "Parisienne", cursive;
+            }
+            /* width */
+            ::-webkit-scrollbar {
+                width: 3px;
+            }
+
+            /* Track */
+            ::-webkit-scrollbar-track {
+                background: #ffffff;
+            }
+
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+                background: #3f3f3f;
+            }
+
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+                background: #1b1b1b;
+            }
+        </style>
+    </head>
+    <body>
+        <nav
+            class="navbar fixed-top bg-dark navbar-expand-lg shadow"
+            data-bs-theme="dark"
+            style="display: none"
+            id="main-nav"
+        >
+            <div class="container-fluid px-md-5">
+                <a class="navbar-brand" href="#">John & Jane</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                    class="collapse navbar-collapse"
+                    id="navbarSupportedContent"
+                >
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#"
+                                >Beranda</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#"
+                                >Tentang</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#"
+                                >Cerita</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#"
+                                >Galeri</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="vh-100">
+            <div
+                id="main-carousel"
+                class="carousel slide carousel-fade h-100"
+                data-bs-ride="carousel"
+            >
+                <div class="carousel-inner h-100">
+                    <div class="carousel-item h-100 active">
+                        <div
+                            class="position-absolute bg-black h-100 w-100 bg-opacity-50 d-flex flex-column justify-content-center align-items-center text-white gap-4 gap-md-3"
+                        >
+                            <h1 class="handwritting display-1 m-0">
+                                John & Jane
+                            </h1>
+                            <div>Senin, 25 Desember 2023</div>
+                            <div class="d-flex flex-row gap-3">
+                                <div class="text-center">00<br />Days</div>
+                                <div class="text-center">00<br />Hours</div>
+                                <div class="text-center">00<br />Minutes</div>
+                                <div class="text-center">00<br />Seconds</div>
+                            </div>
+                            <a
+                                href="#about"
+                                type="button"
+                                class="btn btn-outline-light"
+                            >
+                                Read More
+                            </a>
+                        </div>
+                        <img
+                            src="img/wedding1.jpg"
+                            class="object-fit-cover w-100 h-100"
+                            alt="img/wedding1.jpg"
+                        />
+                    </div>
+                    <div class="carousel-item position-relative h-100">
+                        <div
+                            class="position-absolute bg-black h-100 w-100 bg-opacity-50 d-flex flex-column justify-content-center align-items-center text-white gap-4 gap-md-3"
+                        >
+                            <h1 class="handwritting display-1 m-0">
+                                John & Jane
+                            </h1>
+                            <div>Senin, 25 Desember 2023</div>
+                            <div class="d-flex flex-row gap-3">
+                                <div class="text-center">00<br />Days</div>
+                                <div class="text-center">00<br />Hours</div>
+                                <div class="text-center">00<br />Minutes</div>
+                                <div class="text-center">00<br />Seconds</div>
+                            </div>
+                            <a type="button" class="btn btn-outline-light">
+                                Read More
+                            </a>
+                        </div>
+                        <img
+                            src="img/wedding2.jpg"
+                            class="object-fit-cover w-100 h-100"
+                            alt="img/wedding2.jpg"
+                        />
+                    </div>
+                    <div class="carousel-item position-relative h-100">
+                        <div
+                            class="position-absolute bg-black h-100 w-100 bg-opacity-50 d-flex flex-column justify-content-center align-items-center text-white gap-4 gap-md-3"
+                        >
+                            <h1 class="handwritting display-1 m-0">
+                                John & Jane
+                            </h1>
+                            <div>Senin, 25 Desember 2023</div>
+                            <div class="d-flex flex-row gap-3">
+                                <div class="text-center">00<br />Days</div>
+                                <div class="text-center">00<br />Hours</div>
+                                <div class="text-center">00<br />Minutes</div>
+                                <div class="text-center">00<br />Seconds</div>
+                            </div>
+                            <a type="button" class="btn btn-outline-light">
+                                Read More
+                            </a>
+                        </div>
+                        <img
+                            src="img/wedding3.jpg"
+                            class="object-fit-cover w-100 h-100"
+                            alt="img/wedding3.jpg"
+                        />
+                    </div>
+                </div>
+                <!-- <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#main-carousel"
+                    data-bs-slide="prev"
+                >
+                    <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#main-carousel"
+                    data-bs-slide="next"
+                >
+                    <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                </button> -->
+            </div>
+        </div>
+
+        <div class="pt-5" id="about">
+            <div class="container-fluid mt-5">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h1>TENTANG</h1>
+                        <div class="v-stack my-5">
+                            <div>Om Swastyastu</div>
+                            <p>
+                                Atas Asung Kertha Wara Nugraha Ida Sang Hyang
+                                Widhi Wasa, Perkenankanlah Kami Mengundang
+                                Bapak/Ibu/ Saudara/i Untuk Berkenan Hadir Di
+                                Acara Manusa Yadnya Pawiwahan (Pernikahan) Kami.
+                            </p>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-3">
+                                <img src="img/man.jpg" class="w-100" alt="" />
+                            </div>
+                            <div class="col-3">
+                                <img src="img/woman.jpg" class="w-100" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-1">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Repudiandae tempora molestias dicta praesentium et labore asperiores
+            cupiditate saepe vero, quo cum porro officia odio aperiam. Quaerat
+            provident corporis expedita eius!
+        </div>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            $(document).ready(function () {
+                $(window).scroll(function () {
+                    if ($(window).scrollTop() > $(window).height() / 2) {
+                        $("#main-nav").fadeIn();
+                    } else {
+                        $("#main-nav").fadeOut();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
