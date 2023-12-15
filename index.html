@@ -16,12 +16,20 @@
             href="https://fonts.googleapis.com/css2?family=Parisienne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
             rel="stylesheet"
         />
+        <link rel="stylesheet" href="font-awesome/css/all.min.css" />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
+            rel="stylesheet"
+        />
         <style>
             body * {
                 font-family: "Poppins", sans-serif;
             }
             .handwritting {
                 font-family: "Parisienne", cursive;
+            }
+            .pointer:hover {
+                cursor: pointer;
             }
             /* width */
             ::-webkit-scrollbar {
@@ -46,7 +54,7 @@
     </head>
     <body>
         <nav
-            class="navbar fixed-top bg-dark navbar-expand-lg shadow"
+            class="navbar fixed-top bg-dark navbar-expand-lg"
             data-bs-theme="dark"
             style="display: none"
             id="main-nav"
@@ -210,20 +218,169 @@
                     <div class="col-12 text-center">
                         <h1>TENTANG</h1>
                         <div class="v-stack my-5">
-                            <div>Om Swastyastu</div>
-                            <p>
+                            <div class="handwritting fs-2 mb-3">
+                                Om Swastyastu
+                            </div>
+                            <p class="px-lg-5">
                                 Atas Asung Kertha Wara Nugraha Ida Sang Hyang
                                 Widhi Wasa, Perkenankanlah Kami Mengundang
                                 Bapak/Ibu/ Saudara/i Untuk Berkenan Hadir Di
                                 Acara Manusa Yadnya Pawiwahan (Pernikahan) Kami.
                             </p>
                         </div>
-                        <div class="row justify-content-center">
-                            <div class="col-3">
-                                <img src="img/man.jpg" class="w-100" alt="" />
+                        <div class="row justify-content-center py-5">
+                            <div class="col-lg-4 p-0 p-lg-4">
+                                <div class="position-relative shadow">
+                                    <img
+                                        src="img/man.jpg"
+                                        class="w-100"
+                                        alt=""
+                                    />
+                                    <div
+                                        class="position-absolute bottom-0 bg-black bg-opacity-50 text-white p-3 w-100"
+                                    >
+                                        <div class="vstack">
+                                            <div
+                                                class="handwritting fs-3 fw-bold"
+                                            >
+                                                John Doe
+                                            </div>
+                                            <div>
+                                                Anak pertama dari pasangan
+                                            </div>
+                                            <div>John Doe</div>
+                                            <div>&</div>
+                                            <div>Jane Doe</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-3">
-                                <img src="img/woman.jpg" class="w-100" alt="" />
+                            <div class="col-lg-4 p-0 p-lg-4">
+                                <div class="position-relative shadow">
+                                    <img
+                                        src="img/woman.jpg"
+                                        class="w-100"
+                                        alt=""
+                                    />
+                                    <div
+                                        class="position-absolute bottom-0 bg-black bg-opacity-50 text-white p-3 w-100"
+                                    >
+                                        <div class="vstack">
+                                            <div
+                                                class="handwritting fs-3 fw-bold"
+                                            >
+                                                Jane Doe
+                                            </div>
+                                            <div>
+                                                Anak pertama dari pasangan
+                                            </div>
+                                            <div>John Doe</div>
+                                            <div>&</div>
+                                            <div>Jane Doe</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fs-4 mb-4">Resepsi Pernikahan</div>
+                        <div class="container-fluid">
+                            <div
+                                class="row justify-content-center g-5 g-lg-3 mb-5"
+                            >
+                                <div class="col-lg-3">
+                                    <div class="vstack">
+                                        <i class="fa fa-home fa-3x mb-1"></i>
+                                        <div class="fw-semibold mb-2">
+                                            TEMPAT
+                                        </div>
+                                        <div>
+                                            Br. Dukuh Belong Kerambitan Tabanan
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="vstack">
+                                        <i
+                                            class="fa fa-calendar fa-3x mb-1"
+                                        ></i>
+                                        <div class="fw-semibold mb-2">
+                                            TANGGAL
+                                        </div>
+                                        <div>Sabtu, 30 Juli 2022</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="vstack">
+                                        <i class="fa fa-clock fa-3x mb-1"></i>
+                                        <div class="fw-semibold mb-2">
+                                            WAKTU
+                                        </div>
+                                        <div>13:00 WITA - Selesai</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8 text-center">
+                                <a
+                                    href="https://maps.app.goo.gl/xyKFRs71hC5zL6746"
+                                    target="_blank"
+                                    class="btn btn-dark mb-4"
+                                    ><i class="fa fa-map"></i> Maps</a
+                                >
+                                <div class="ratio ratio-21x9 img-thumbnail">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15776.806982644308!2d115.22365830845948!3d-8.672355231207847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd240f5b0baad2f%3A0xf67150ab4e009a2c!2sBajra%20Sandhi%20Monument!5e0!3m2!1sen!2sid!4v1702622568665!5m2!1sen!2sid"
+                                        style="border: 0"
+                                        allowfullscreen=""
+                                        loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade"
+                                    ></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-lg-5 mt-5 mb-3">
+                            Merupakan suatu kehormatan dan kebahagiaan bagi kami
+                            apabila Bapak/Ibu/Saudara/i berkenan hadir di acara
+                            Upacara Pawiwahan (Pernikahan) Kami.
+                        </div>
+                        <div class="px-lg-5 handwritting fs-2">
+                            Om Santih Santih Santih Om
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pt-5" id="about">
+            <div class="container-fluid mt-5">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h1 class="mb-4">CERITA</h1>
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="position-relative mb-4">
+                                    <div
+                                        class="d-flex position-absolute z-3 w-100 h-100 align-items-center justify-content-center"
+                                    >
+                                        <div
+                                            class="bg-black bg-opacity-50 text-white px-5 py-3"
+                                        >
+                                            Video di sini (jika ada)
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="ratio ratio-21x9 bg-secondary"
+                                    ></div>
+                                </div>
+                                <div>
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Voluptatibus quam eligendi
+                                    in expedita autem quas quae earum sequi
+                                    consequatur repellendus aperiam officiis
+                                    reprehenderit inventore voluptas, magni
+                                    natus! Tempore, in voluptates!
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -231,12 +388,95 @@
             </div>
         </div>
 
-        <div class="col-1">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Repudiandae tempora molestias dicta praesentium et labore asperiores
-            cupiditate saepe vero, quo cum porro officia odio aperiam. Quaerat
-            provident corporis expedita eius!
+        <div class="pt-5" id="about">
+            <div class="container-fluid mt-5">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h1 class="mb-4">GALERI</h1>
+                        <div class="container">
+                            <div class="row g-3">
+                                <div class="col-lg-3">
+                                    <a
+                                        href="img/galery1.jpg"
+                                        data-lightbox="image-gallery"
+                                    >
+                                        <img
+                                            src="img/galery1.jpg"
+                                            class="img-fluid rounded"
+                                            data-galery="galery1.jpg"
+                                        />
+                                    </a>
+                                </div>
+                                <div class="col-lg-3">
+                                    <a
+                                        href="img/galery2.jpg"
+                                        data-lightbox="image-gallery"
+                                    >
+                                        <img
+                                            src="img/galery2.jpg"
+                                            class="img-fluid rounded"
+                                            data-galery="galery2.jpg"
+                                        />
+                                    </a>
+                                </div>
+                                <div class="col-lg-3">
+                                    <a
+                                        href="img/galery3.jpg"
+                                        data-lightbox="image-gallery"
+                                    >
+                                        <img
+                                            src="img/galery3.jpg"
+                                            class="img-fluid rounded"
+                                            data-galery="galery3.jpg"
+                                        />
+                                    </a>
+                                </div>
+                                <div class="col-lg-3">
+                                    <a
+                                        href="img/galery4.jpg"
+                                        data-lightbox="image-gallery"
+                                    >
+                                        <img
+                                            src="img/galery4.jpg"
+                                            class="img-fluid rounded"
+                                            data-galery="galery4.jpg"
+                                        />
+                                    </a>
+                                </div>
+                                <div class="col-lg-6">
+                                    <a
+                                        href="img/galery5.jpg"
+                                        data-lightbox="image-gallery"
+                                    >
+                                        <img
+                                            src="img/galery5.jpg"
+                                            class="img-fluid rounded"
+                                            data-galery="galery5.jpg"
+                                        />
+                                    </a>
+                                </div>
+                                <div class="col-lg-6">
+                                    <a
+                                        href="img/galery6.jpg"
+                                        data-lightbox="image-gallery"
+                                    >
+                                        <img
+                                            src="img/galery6.jpg"
+                                            class="img-fluid rounded"
+                                            data-galery="galery6.jpg"
+                                        />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <footer class="mt-5 p-3 text-center bg-dark text-white">
+            ~ Terima kasih ~
+        </footer>
 
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
@@ -248,7 +488,12 @@
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
             crossorigin="anonymous"
         ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
         <script>
+            lightbox.option({
+                disableScrolling: true,
+                alwaysShowNavOnTouchDevices: true,
+            });
             $(document).ready(function () {
                 $(window).scroll(function () {
                     if ($(window).scrollTop() > $(window).height() / 2) {
