@@ -145,6 +145,15 @@
                                 >Galeri</a
                             >
                         </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link link-congrats scroll-link"
+                                data-id="congrats"
+                                aria-current="page"
+                                href="#"
+                                >Ucapan</a
+                            >
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -686,6 +695,11 @@
                                             Kirim
                                         </button>
                                     </div>
+                                    <div
+                                        id="grats-container"
+                                        class="mt-4 text-start overflow-y-auto px-1"
+                                        style="max-height: 400px"
+                                    ></div>
                                 </div>
                             </div>
                         </div>
@@ -740,7 +754,6 @@
                 alwaysShowNavOnTouchDevices: true,
             });
             let currentURL = window.location.href;
-            console.log(currentURL);
             let URLarr = currentURL.split("?");
             if (URLarr[1]) {
                 $("#invitation-to").html(URLarr[1].replace("+", " "));
@@ -759,6 +772,21 @@
                         $("#toggle-play").fadeOut();
                     }
                 }
+            }
+            function loadComment() {
+                $.ajax({
+                    url: "https://schedule.imadebg.com/public/grats/read",
+                    dataType: "json",
+                    success: function (response) {
+                        if (response.length > 0) {
+                            let messages = "";
+                            $.each(response, function (idx, val) {
+                                messages += `<div class="mb-2 bg-secondary-subtle px-3 py-2 rounded-3"><div class="fw-semibold">${val.frm}</div><div class="small">${val.msg}</div></div>`;
+                            });
+                            $("#grats-container").html(messages);
+                        }
+                    },
+                });
             }
 
             // counter
@@ -792,11 +820,13 @@
             // end of counter
 
             $(document).ready(function () {
+                loadComment();
                 let position = {
                     home: -10,
                     about: $("#about").offset().top,
                     story: $("#story").offset().top,
                     galery: $("#galery").offset().top,
+                    congrats: $("#congrats").offset().top,
                 };
                 $("#open-invitation").click(function () {
                     $("#cover").fadeOut(function () {
@@ -839,7 +869,6 @@
                     let id = $(this).data("id");
                     $("html, body").scrollTop($("#" + id).offset().top);
                     if ($(this).hasClass("nav-link")) {
-                        console.log("nav link is clicked");
                         $(".navbar-toggler").click();
                     }
                 });
@@ -866,11 +895,26 @@
                             crossDomain: true, // Enable cross-domain AJAX request
                             dataType: "json",
                             success: function (response) {
-                                console.log(response);
+                                if (response == 1) {
+                                    $("#alert-message")
+                                        .html("Pesan terkirim")
+                                        .removeClass("alert-danger")
+                                        .addClass("alert-success")
+                                        .fadeIn();
+                                    setTimeout(function () {
+                                        $("#alert-message").fadeOut();
+                                    }, 3000);
+                                }
+                                $("#from").val("");
+                                $("#message").val("");
+                                loadComment();
                             },
                         });
                     }
                 });
+                setInterval(function () {
+                    loadComment();
+                }, 5000);
             });
         </script>
     </body>
