@@ -812,7 +812,6 @@
             let currentURL = window.location.href;
             let URLarr = currentURL.split("?");
             if (URLarr[1]) {
-                replace(/l/g, "")
                 $("#invitation-to").html(URLarr[1].replace(/\+/g, " "));
             } else {
                 $(".invitation-detail").hide();
