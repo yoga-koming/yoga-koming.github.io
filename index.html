@@ -3,7 +3,24 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Undangan</title>
+        <meta
+            name="description"
+            content="25 Desember 2023 - Br. Tengah, Punggul, Abiansemal"
+        />
+        <meta
+            property="og:title"
+            content="Undangan Pawiwahan - Yoga & Koming"
+        />
+        <meta property="og:url" content="https://yoga-koming.github.io/" />
+        <meta
+            property="og:description"
+            content="25 Desember 2023 - Br. Tengah, Punggul, Abiansemal"
+        />
+        <meta
+            property="og:image"
+            content="https://yoga-koming.github.io/img/thumbnail.jpg"
+        />
+        <title>Undangan Pawiwahan - Yoga & Koming</title>
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
             rel="stylesheet"
@@ -82,7 +99,9 @@
                     <div
                         class="z-3 text-center bg-white bg-opacity-75 rounded-4 text-black p-4 mx-3 my-5 my-lg-3"
                     >
-                        <h1 class="handwritting display-1 mb-3">Yoga & Tri</h1>
+                        <h1 class="handwritting display-1 mb-3">
+                            Yoga & Koming
+                        </h1>
                         <div class="mb-2 invitation-detail">Dear:</div>
                         <div
                             class="fs-4 mb-3 invitation-detail"
@@ -107,7 +126,7 @@
         >
             <div class="container-fluid px-md-5">
                 <a class="navbar-brand" href="#" onclick="return false"
-                    >Yoga & Tri</a
+                    >Yoga & Koming</a
                 >
                 <button
                     class="navbar-toggler"
@@ -186,7 +205,7 @@
                                 class="handwritting display-1 m-0"
                                 data-aos="slide-up"
                             >
-                                Yoga & Tri
+                                Yoga & Koming
                             </h1>
                             <div data-aos="slide-up">
                                 Senin, 25 Desember 2023
@@ -235,7 +254,7 @@
                                 class="handwritting display-1 m-0"
                                 data-aos="slide-up"
                             >
-                                Yoga & Tri
+                                Yoga & Koming
                             </h1>
                             <div data-aos="slide-up">
                                 Senin, 25 Desember 2023
@@ -284,7 +303,7 @@
                                 class="handwritting display-1 m-0"
                                 data-aos="slide-up"
                             >
-                                Yoga & Tri
+                                Yoga & Koming
                             </h1>
                             <div data-aos="slide-up">
                                 Senin, 25 Desember 2023
@@ -394,7 +413,7 @@
                                             <div
                                                 class="handwritting fs-3 fw-bold"
                                             >
-                                                Ni Nyoman Tri Adiyuni
+                                                Ni Nyoman Koming Adiyuni
                                             </div>
                                             <!-- <div>
                                                 Anak pertama dari pasangan
@@ -504,25 +523,22 @@
                             <div class="col-lg-8">
                                 <div class="position-relative mb-4">
                                     <div
-                                        class="d-flex position-absolute z-3 w-100 h-100 align-items-center justify-content-center"
+                                        class="ratio"
+                                        style="
+                                            --bs-aspect-ratio: calc(
+                                                (480 / 848) * 100%
+                                            );
+                                        "
                                     >
-                                        <div
-                                            class="bg-black bg-opacity-50 text-white px-5 py-3"
-                                        >
-                                            Video di sini (jika ada)
-                                        </div>
+                                        <video id="my-video" controls>
+                                            <source
+                                                src="vid/video.mp4"
+                                                type="video/mp4"
+                                            />
+                                            Your browser does not support the
+                                            video tag.
+                                        </video>
                                     </div>
-                                    <div
-                                        class="ratio ratio-21x9 bg-secondary"
-                                    ></div>
-                                </div>
-                                <div>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Voluptatibus quam eligendi
-                                    in expedita autem quas quae earum sequi
-                                    consequatur repellendus aperiam officiis
-                                    reprehenderit inventore voluptas, magni
-                                    natus! Tempore, in voluptates!
                                 </div>
                             </div>
                         </div>
@@ -955,6 +971,13 @@
                 setInterval(function () {
                     loadComment();
                 }, 5000);
+                $("#my-video").on("play", function (e) {
+                    let myAudio = document.getElementById("myAudio");
+                    myAudio.pause();
+                    $("#playback-icon")
+                        .removeClass("fa-stop")
+                        .addClass("fa-play");
+                });
             });
         </script>
     </body>
